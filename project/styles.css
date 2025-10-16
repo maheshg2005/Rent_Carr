@@ -1,0 +1,256 @@
+/* 🌆 Background styling for login & register pages */
+.auth-page {
+    background: url('images/new-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: left; /* Align to the right */
+    align-items: center;
+    padding-left: 50px; /* Add some padding to the right */
+}
+
+/* 💎 Login & Register Card (Glass Effect) */
+.auth-card {
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent effect */
+    backdrop-filter: blur(8px); /* Blur background */
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3); /* Updated shadow color */
+    color: white;
+}
+
+/* 🖋️ Input Fields */
+.form-control {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 123, 255, 0.3); /* Updated border color */
+    color: white;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+/* ✨ Form Buttons */
+.btn-custom {
+    background-color: #007bff; /* Updated primary color */
+    color: white; /* Updated text color */
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #ffaa00; /* Darker Gold */
+    color: black;
+}
+
+/* 🔗 Text Links */
+.text-link {
+    text-align: center;
+    margin-top: 10px;
+    color: gold;
+}
+
+.text-link a {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.text-link a:hover {
+    color: #ffaa00;
+}
+
+/* 🌍 General Body Styling */
+body {
+    background-color: #090808;  /* Dark background */
+    font-family: "Poppins", sans-serif;
+    color: rgb(247, 244, 244);
+}
+
+.car-page-bg {
+    background-color: white; /* Background color for car showing page */
+}
+
+.dashboard-bg {
+    background-color: black; /* Background color for dashboard */
+    color: white; /* Default text color */
+}
+
+.vehicle-name {
+    color: white; /* Text color for vehicle names */
+}
+
+.price {
+    color: white; /* Text color for car prices */
+}
+
+.heading {
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    color: #007bff; /* Primary color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+    margin-bottom: 30px; /* Add some margin at the bottom */
+}
+
+.booking-requests-heading {
+    font-size: 2rem; /* Font size for Booking Requests heading */
+    font-weight: bold; /* Make it bold */
+    color: #28a745; /* Green color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+    margin-bottom: 20px; /* Add some margin at the bottom */
+}
+
+.system-heading {
+    font-size: 3rem; /* Large font size */
+    font-weight: bold; /* Bold text */
+    color: #007bff; /* Primary color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+    margin-bottom: 30px; /* Add some margin at the bottom */
+    backdrop-filter: blur(5px); /* Blur effect */
+    position: absolute; /* Position at the top */
+    top: 20px; /* Distance from the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+/* 📦 Container Spacing */
+.container {
+    margin-top: 50px;
+}
+
+/* 🏆 Card Styling */
+.card {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent effect */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* 🔷 Navbar */
+.navbar {
+    background-color: #001f3f !important; /* Deep Navy Blue */
+}
+
+.navbar a {
+    color: gold !important;  /* Gold color text */
+    font-weight: bold;
+}
+
+/* 🔳 Dark Logout Button */
+.btn-logout {
+    background-color: #222; /* Dark Gray */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #000; /* Black */
+    color: white;
+}
+
+/* 🚗 Vehicle Image Styling */
+.vehicle-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .auth-card {
+        width: 90%;
+    }
+}
+
+/* 🏷️ Booking Status Styling */
+.table .status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.table .status.Pending {
+    background-color: #ffcc00; /* Gold */
+    color: #1b1b1b; /* Dark text */
+}
+
+.table .status.Approved {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.table .status.Cancelled {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+/* ✨ Animation for Status Change */
+@keyframes statusChange {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.table .status {
+    animation: statusChange 0.5s ease-in-out;
+}
+/* 🎉 Booked Successfully Notification */
+.booked-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(40, 167, 69, 0.95); /* Green background */
+    color: white;
+    padding: 20px 25px; /* Increase padding */
+    border-radius: 10px;
+    font-size: 24px; /* Increase font size */
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: none; /* Initially hidden */
+    animation: fadeInSlideUp 0.8s ease-in-out, bounceEffect 1.2s infinite alternate;
+}
+
+/* 🎭 Fade-in and slide-up animation */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✨ Bounce effect for notification */
+@keyframes bounceEffect {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 📱 Responsive Adjustment */
+@media (max-width: 768px) {
+    .booked-notification {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        padding: 15px 20px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
